@@ -25,5 +25,9 @@
   "homepage": "https://github.com/bahmutov/modules-used#readme",
   "dependencies": {
     "debug": "2.2.0"
-  }
+  },
+  "devDependencies": {
+    "pre-git": "0.6.2"
+  },
+  "pre-commit": "npm version"
 }
