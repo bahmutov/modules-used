@@ -1,6 +1,6 @@
 {
   "name": "modules-used",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fetches 1 line description for dependencies, outputs the list as Markdown text",
   "main": "modules-used.js",
   "scripts": {

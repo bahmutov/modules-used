@@ -1,11 +1,12 @@
 function modulesUsed() {
+  var cwd = process.cwd();
   var log = require('debug')('used');
-  var pkg = require('./package.json');
-  log('modules used in', pkg.name);
 
   var join = require('path').join;
+  var pkg = require(join(cwd, 'package.json'));
+  log('modules used in', pkg.name);
+
   var read = require('fs').readFileSync;
-  var cwd = process.cwd();
 
   function getProdDependenciesList(pkg) {
     return pkg && pkg.dependencies ? Object.keys(pkg.dependencies) : [];
