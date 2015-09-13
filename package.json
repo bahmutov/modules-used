@@ -1,0 +1,29 @@
+{
+  "name": "modules-used",
+  "version": "1.0.0",
+  "description": "Fetches 1 line description for dependencies, outputs the list as Markdown text",
+  "main": "modules-used.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/modules-used.git"
+  },
+  "keywords": [
+    "module",
+    "dependency",
+    "dependencies",
+    "list",
+    "markdown"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/modules-used/issues"
+  },
+  "homepage": "https://github.com/bahmutov/modules-used#readme",
+  "dependencies": {
+    "debug": "2.2.0"
+  }
+}
