@@ -4,7 +4,8 @@
   "description": "Fetches 1 line description for dependencies, outputs the list as Markdown text",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "3rd-party": "node ./bin/modules-used.js | um README.md '### 3rd party modules'"
   },
   "bin": {
     "modules-used": "./bin/modules-used.js"
@@ -30,6 +31,7 @@
     "debug": "2.2.0"
   },
   "devDependencies": {
+    "update-markdown": "1.1.1",
     "pre-git": "0.6.2"
   },
   "pre-commit": "npm version"
