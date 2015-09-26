@@ -17,12 +17,29 @@ function modulesUsed() {
     var pkg = JSON.parse(read(filename));
     return {
       name: pkg.name,
-      description: pkg.description
+      description: pkg.description,
+      homepage: pkg.homepage
     };
   }
 
-  function toMarkdown(pkgInfo) {
-    return '* ' + pkgInfo.name + ' - ' + pkgInfo.description;
+  function hasHomepage(info) {
+    return typeof info.homepage === 'string' && info.homepage;
+  }
+
+  function mdWithHomepage(info) {
+    return '* [' + info.name + '](' + info.homepage + ') - ' + info.description;
+  }
+
+  function mdWithoutHomepage(info) {
+    return '* ' + info.name + ' - ' + info.description;
+  }
+
+  function toMarkdown(info) {
+    if (hasHomepage(info)) {
+      return mdWithHomepage(info);
+    } else {
+      return mdWithoutHomepage(info);
+    }
   }
 
   var prodDependencies = getProdDependenciesList(pkg);
@@ -35,5 +52,6 @@ function modulesUsed() {
 module.exports = modulesUsed;
 
 if (!module.parent) {
-  modulesUsed();
+  console.log('modules used for this project');
+  console.log(modulesUsed());
 }

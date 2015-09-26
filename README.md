@@ -22,7 +22,7 @@ Assumes the dependencies are installed locally.
 
 ### 3rd party modules
 
-- debug - small debugging utility
+- [debug](https://github.com/visionmedia/debug) - small debugging utility
 
 ### Small print
 Author: Gleb Bahmutov &copy; 2015
